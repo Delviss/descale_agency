@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - claude/deploy-github-pages-frxOd
   workflow_dispatch:
 
 permissions:
