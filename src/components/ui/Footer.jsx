@@ -83,7 +83,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <a href="/homepage" className="inline-flex items-center gap-3 mb-5" aria-label="Descale Agency home">
               <img
-                src="/assets/images/logo-mark.svg"
+                src={`${import.meta.env.BASE_URL}assets/images/logo-mark.svg`}
                 alt=""
                 aria-hidden="true"
                 className="h-11 w-auto drop-shadow-[0_4px_20px_rgba(255,107,53,0.45)]"
