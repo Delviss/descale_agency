@@ -82,42 +82,57 @@
     --shadow-brand-lg: 0 24px 60px -12px rgba(6, 73, 167, 0.4);
   }
 
+  /* Dark Mode / High Contrast — vibrant neon accents */
   .dark {
-    --color-background: #0B0B0F;
-    --color-foreground: #F5F2EA;
-    --color-card: #15141B;
-    --color-card-foreground: #F5F2EA;
-    --color-popover: #15141B;
-    --color-popover-foreground: #F5F2EA;
-    --color-muted: #1C1B24;
-    --color-muted-foreground: #9C9AA4;
-    --color-border: #26252F;
-    --color-input: #15141B;
-    --color-ring: #FF6B35;
+    --color-background: #05060A;
+    --color-foreground: #F5F8FF;
+    --color-card: #0E1018;
+    --color-card-foreground: #F5F8FF;
+    --color-popover: #0E1018;
+    --color-popover-foreground: #F5F8FF;
+    --color-muted: #11141C;
+    --color-muted-foreground: #B8BCD0;
+    --color-border: #2A2F45;
+    --color-input: #0E1018;
+    --color-ring: #00E5FF;
 
-    --color-primary: #E74A1F;
-    --color-primary-foreground: #FFFFFF;
-    --color-secondary: #5B8BF5;
-    --color-secondary-foreground: #0B0B0F;
-    --color-accent: #FF8F5E;
-    --color-accent-foreground: #0B0B0F;
+    /* Vibrant neon brand */
+    --color-primary: #00E5FF;
+    --color-primary-foreground: #05060A;
+    --color-secondary: #7C4DFF;
+    --color-secondary-foreground: #FFFFFF;
+    --color-accent: #FF2E9A;
+    --color-accent-foreground: #FFFFFF;
 
-    --color-success: #34D399;
-    --color-warning: #FBBF24;
-    --color-error: #F87171;
-    --color-destructive: #F87171;
+    --color-success: #00FFA3;
+    --color-success-foreground: #05060A;
+    --color-warning: #FFD60A;
+    --color-warning-foreground: #05060A;
+    --color-error: #FF3B6B;
+    --color-error-foreground: #FFFFFF;
+    --color-destructive: #FF3B6B;
+    --color-destructive-foreground: #FFFFFF;
 
-    --color-surface: #15141B;
-    --color-text-primary: #F5F2EA;
-    --color-text-secondary: #9C9AA4;
+    --color-surface: #0E1018;
+    --color-text-primary: #F5F8FF;
+    --color-text-secondary: #B8BCD0;
 
-    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.45);
-    --shadow-md: 0 8px 20px -4px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 20px 40px -8px rgba(0, 0, 0, 0.55);
-    --shadow-xl: 0 32px 64px -12px rgba(0, 0, 0, 0.65);
-    --shadow-brand: 0 12px 32px -8px rgba(231, 74, 31, 0.4);
-    --shadow-brand-lg: 0 24px 60px -12px rgba(231, 74, 31, 0.5);
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.6);
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.65);
+    --shadow-md: 0 8px 20px -4px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 20px 40px -8px rgba(0, 0, 0, 0.75);
+    --shadow-xl: 0 32px 64px -12px rgba(0, 0, 0, 0.85);
+    --shadow-brand: 0 0 28px -2px rgba(0, 229, 255, 0.45), 0 12px 32px -8px rgba(124, 77, 255, 0.35);
+    --shadow-brand-lg: 0 0 60px -4px rgba(0, 229, 255, 0.55), 0 24px 60px -12px rgba(255, 46, 154, 0.45);
+  }
+
+  /* IT Services in dark mode — keep neon palette but anchor on electric blue */
+  .dark body[data-domain="it"],
+  body[data-domain="it"].dark {
+    --color-primary: #00E5FF;
+    --color-ring: #00E5FF;
+    --shadow-brand: 0 0 28px -2px rgba(0, 229, 255, 0.5), 0 12px 32px -8px rgba(124, 77, 255, 0.4);
+    --shadow-brand-lg: 0 0 60px -4px rgba(0, 229, 255, 0.6), 0 24px 60px -12px rgba(255, 46, 154, 0.5);
   }
 
   * {
@@ -403,13 +418,13 @@
 
 /* Modern gradient mesh backgrounds */
 .bg-mesh-dark {
-  background-color: #0B0B0F;
+  background-color: #05060A;
   background-image:
-    radial-gradient(at 20% 20%, rgba(167, 41, 6, 0.35) 0px, transparent 50%),
-    radial-gradient(at 80% 0%, rgba(255, 107, 53, 0.25) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, rgba(6, 73, 167, 0.25) 0px, transparent 50%),
-    radial-gradient(at 80% 80%, rgba(255, 107, 53, 0.18) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(167, 41, 6, 0.30) 0px, transparent 50%);
+    radial-gradient(at 18% 18%, rgba(0, 229, 255, 0.30) 0px, transparent 55%),
+    radial-gradient(at 82% 6%, rgba(124, 77, 255, 0.28) 0px, transparent 55%),
+    radial-gradient(at 4% 52%, rgba(255, 46, 154, 0.22) 0px, transparent 55%),
+    radial-gradient(at 84% 78%, rgba(0, 255, 163, 0.18) 0px, transparent 55%),
+    radial-gradient(at 0% 100%, rgba(124, 77, 255, 0.30) 0px, transparent 55%);
 }
 .bg-mesh-light {
   background-color: #FBFAF7;
@@ -417,6 +432,25 @@
     radial-gradient(at 10% 10%, rgba(255, 107, 53, 0.15) 0px, transparent 55%),
     radial-gradient(at 90% 20%, rgba(6, 73, 167, 0.10) 0px, transparent 50%),
     radial-gradient(at 50% 100%, rgba(167, 41, 6, 0.10) 0px, transparent 50%);
+}
+
+/* In dark mode, swap any light mesh usage to the neon dark mesh automatically */
+.dark .bg-mesh-light {
+  background-color: #05060A;
+  background-image:
+    radial-gradient(at 18% 18%, rgba(0, 229, 255, 0.30) 0px, transparent 55%),
+    radial-gradient(at 82% 6%, rgba(124, 77, 255, 0.28) 0px, transparent 55%),
+    radial-gradient(at 4% 52%, rgba(255, 46, 154, 0.22) 0px, transparent 55%),
+    radial-gradient(at 84% 78%, rgba(0, 255, 163, 0.18) 0px, transparent 55%),
+    radial-gradient(at 0% 100%, rgba(124, 77, 255, 0.30) 0px, transparent 55%);
+}
+
+/* Neon glow utilities for dark mode emphasis */
+.dark .neon-text {
+  text-shadow: 0 0 12px rgba(0, 229, 255, 0.55), 0 0 28px rgba(124, 77, 255, 0.35);
+}
+.dark .neon-ring {
+  box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 24px -4px rgba(0, 229, 255, 0.45);
 }
 
 /* Noise overlay for cinematic texture */

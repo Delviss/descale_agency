@@ -15,15 +15,21 @@ import ITCtaBand from './components/ITCtaBand';
 const ITHome = () => {
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
+    document.documentElement.classList.add('dark');
+    document.body.classList.add('dark');
     document.body.setAttribute('data-domain', 'it');
+    document.body.style.backgroundColor = 'var(--color-background)';
     return () => {
       document.documentElement.style.scrollBehavior = 'auto';
+      document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark');
       document.body.removeAttribute('data-domain');
+      document.body.style.backgroundColor = '';
     };
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>IT Services — Descale Agency · Platforms, apps, design, websites.</title>
         <meta
