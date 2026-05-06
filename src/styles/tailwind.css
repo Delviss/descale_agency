@@ -312,10 +312,12 @@
     scroll-snap-align: start;
   }
 
-  .gradient-brand {
+  .gradient-brand,
+  .bg-gradient-brand {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   }
-  .gradient-accent {
+  .gradient-accent,
+  .bg-gradient-accent {
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
   }
   .gradient-text {
