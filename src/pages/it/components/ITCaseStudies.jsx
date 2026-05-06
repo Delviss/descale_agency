@@ -69,8 +69,9 @@ const ITCaseStudies = () => {
                   className="absolute inset-0 opacity-30"
                   style={{
                     backgroundImage:
-                      'linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px)',
+                      'linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)',
                     backgroundSize: '32px 32px',
+                    color: 'var(--color-foreground)',
                   }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
