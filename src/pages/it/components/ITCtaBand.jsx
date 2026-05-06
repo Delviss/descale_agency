@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 
 const ITCtaBand = () => {
@@ -27,15 +28,15 @@ const ITCtaBand = () => {
                 Tell us what you want to ship. We'll come back with a plan, a team, and a timeline.
               </p>
             </div>
-            <a
-              href="/get-started"
+            <Link
+              to="/get-started"
               className="group inline-flex items-center gap-3 px-7 py-4 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-all duration-300 shadow-brand self-start lg:self-auto"
             >
               Get Started
               <span className="w-8 h-8 rounded-full bg-background/15 group-hover:bg-background/25 flex items-center justify-center transition-colors">
                 <Icon name="ArrowUpRight" size={16} />
               </span>
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

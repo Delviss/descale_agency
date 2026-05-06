@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 
 const features = [
@@ -114,13 +115,13 @@ const ScrollFeatureSection = () => {
                     {f.statLabel}
                   </div>
                 </div>
-                <a
-                  href="/get-started"
+                <Link
+                  to="/get-started"
                   className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors"
                 >
                   Learn more
                   <Icon name="ArrowUpRight" size={14} />
-                </a>
+                </Link>
               </div>
             </motion.article>
           ))}
