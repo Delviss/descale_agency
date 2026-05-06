@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
 
@@ -7,6 +7,7 @@ const Header = ({ className = '' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navigationItems = [
     { name: 'Marketing Services', path: '/marketing', icon: 'Megaphone', matches: ['/', '/marketing'] },
@@ -55,17 +56,17 @@ const Header = ({ className = '' }) => {
         <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="block hover-lift" aria-label="Descale Agency home">
+            <Link to="/" className="block hover-lift" aria-label="Descale Agency home">
               <Logo />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navigationItems?.map((item) => (
-              <a
+              <Link
                 key={item?.path}
-                href={item?.path}
+                to={item?.path}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-brand-fast hover-lift ${
                   isActivePath(item)
                     ? 'bg-primary text-primary-foreground shadow-brand'
@@ -73,7 +74,7 @@ const Header = ({ className = '' }) => {
                 }`}
               >
                 {item?.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -84,7 +85,7 @@ const Header = ({ className = '' }) => {
               size="sm"
               iconName="ArrowUpRight"
               iconPosition="right"
-              onClick={() => window.location.href = '/get-started'}
+              onClick={() => navigate('/get-started')}
               className="hover-brand"
             >
               Get Started
@@ -118,9 +119,9 @@ const Header = ({ className = '' }) => {
         >
           <div className="bg-background/98 backdrop-blur-brand px-4 py-6 space-y-2">
             {navigationItems?.map((item) => (
-              <a
+              <Link
                 key={item?.path}
-                href={item?.path}
+                to={item?.path}
                 className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-base font-semibold transition-all duration-brand-fast ${
                   isActivePath(item)
                     ? 'bg-primary text-primary-foreground shadow-brand'
@@ -129,17 +130,17 @@ const Header = ({ className = '' }) => {
               >
                 <Icon name={item?.icon} size={20} />
                 <span>{item?.name}</span>
-              </a>
+              </Link>
             ))}
 
             <div className="pt-4 border-t border-border">
-              <a
-                href="/get-started"
+              <Link
+                to="/get-started"
                 className="flex items-center justify-center space-x-2 px-4 py-3 rounded-lg text-base font-semibold bg-primary text-primary-foreground shadow-brand hover:opacity-95 transition-all duration-brand-fast"
               >
                 <span>Get Started</span>
                 <Icon name="ArrowUpRight" size={18} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

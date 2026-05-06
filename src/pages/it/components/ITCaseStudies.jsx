@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 
 const studies = [
@@ -44,12 +45,12 @@ const ITCaseStudies = () => {
               <span className="font-serif-accent italic">scaled.</span>
             </h2>
           </div>
-          <a
-            href="/get-started"
+          <Link
+            to="/get-started"
             className="inline-flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
           >
             Discuss your project <Icon name="ArrowUpRight" size={16} />
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

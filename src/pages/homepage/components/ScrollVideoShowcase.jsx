@@ -1,6 +1,9 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
+
+const MotionLink = motion(Link);
 
 const reels = [
   {
@@ -56,12 +59,12 @@ const ScrollVideoShowcase = () => {
               </span>
             </h2>
           </div>
-          <a
-            href="/get-started"
+          <Link
+            to="/get-started"
             className="inline-flex items-center gap-2 text-sm font-medium text-black/70 hover:text-primary transition-colors"
           >
             View all case studies <Icon name="ArrowUpRight" size={16} />
-          </a>
+          </Link>
         </div>
 
         {/* Scroll-scale video reel */}
@@ -70,9 +73,9 @@ const ScrollVideoShowcase = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-5"
         >
           {reels.map((r, i) => (
-            <motion.a
+            <MotionLink
               key={r.title}
-              href="/get-started"
+              to="/get-started"
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
@@ -127,7 +130,7 @@ const ScrollVideoShowcase = () => {
                   />
                 </div>
               </div>
-            </motion.a>
+            </MotionLink>
           ))}
         </motion.div>
       </div>

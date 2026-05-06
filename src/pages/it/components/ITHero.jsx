@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 
 const ITHero = () => {
@@ -56,22 +57,22 @@ const ITHero = () => {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
-          <a
-            href="/get-started"
+          <Link
+            to="/get-started"
             className="group inline-flex items-center gap-3 px-7 py-4 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-all duration-300 shadow-brand"
           >
             Get Started
             <span className="w-8 h-8 rounded-full bg-background/15 group-hover:bg-background/25 flex items-center justify-center transition-colors">
               <Icon name="ArrowUpRight" size={16} />
             </span>
-          </a>
-          <a
-            href="/marketing"
+          </Link>
+          <Link
+            to="/marketing"
             className="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-foreground/15 text-foreground/80 hover:text-foreground hover:border-foreground/40 transition-all duration-300"
           >
             Looking for marketing?
             <Icon name="ArrowRight" size={16} />
-          </a>
+          </Link>
         </motion.div>
 
         {/* Quick stats */}
