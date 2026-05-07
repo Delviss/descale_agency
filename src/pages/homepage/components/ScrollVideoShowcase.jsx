@@ -197,16 +197,18 @@ const ReelCard = ({ reel, index, onOpen }) => {
 
 const ReelLightbox = ({ reel, onClose }) => {
   useEffect(() => {
+    if (!reel) return;
     const onKey = (e) => {
       if (e.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => {
       window.removeEventListener('keydown', onKey);
-      document.body.style.overflow = '';
+      document.body.style.overflow = prevOverflow;
     };
-  }, [onClose]);
+  }, [reel, onClose]);
 
   return (
     <AnimatePresence>
