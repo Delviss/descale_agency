@@ -41,7 +41,7 @@ const Header = ({ className = '' }) => {
     <img
       src={`${import.meta.env.BASE_URL}assets/images/descale-logo.png`}
       alt="Descale Agency"
-      className="h-12 sm:h-14 md:h-16 w-auto select-none object-contain"
+      className="h-16 sm:h-20 md:h-24 w-auto select-none object-contain"
       draggable={false}
     />
   );
@@ -55,7 +55,7 @@ const Header = ({ className = '' }) => {
       } ${className}`}
     >
       <div className="w-full">
-        <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 md:h-24 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="block hover-lift" aria-label="Descale Agency home">
